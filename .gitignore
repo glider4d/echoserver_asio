@@ -1,0 +1,4 @@
+#ignore build path
+build/
+#ignore vscode path
+.vscode/
