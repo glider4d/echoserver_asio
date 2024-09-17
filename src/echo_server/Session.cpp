@@ -23,8 +23,8 @@ void echo_server::Session::do_write(std::size_t length){
         asio::async_write(socket_, asio::buffer(data_, length),
             [this, self](std::error_code ec, std::size_t /*length*/) {
                 if (!ec) {
-                    socket_.shutdown(tcp::socket::shutdown_both, ec);
-                    //  do_read();
+                    // socket_.shutdown(tcp::socket::shutdown_both, ec);
+                    do_read();
                 } 
             });
 }
